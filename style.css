@@ -1,0 +1,26 @@
+body{
+    font-family: Tahoma, 'B Titr', sans-serif;
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    background-color: #e0e8ff;
+    background-image: url(pattern-background-desktop.svg);
+    background-repeat:no-repeat;
+    background-size: contain;
+    
+}
+
+
+main {
+    width: 90%;
+    max-width: 400px; 
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    justify-content:center ;
+    align-items: center;
+    
+   
+}

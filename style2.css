@@ -1,0 +1,142 @@
+/* متغیرهای CSS (برای مدیریت راحت‌تر رنگ‌ها) */
+:root {
+    --pale-blue: hsl(225, 100%, 94%); /* رنگ پس‌زمینه کارت */
+    --bright-blue: hsl(245, 75%, 52%); /* رنگ دکمه اصلی */
+    --desaturated-blue: hsl(224, 23%, 55%); /* رنگ متن توضیحات */
+    --dark-blue: hsl(223, 47%, 23%); /* رنگ عنوان */
+    --very-pale-blue: hsl(225, 100%, 98%); /* رنگ پس‌زمینه باکس طرح */
+}
+
+/* بازنشانی و استایل‌های کلی بدنه */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, 'B Titr', sans-serif;
+    background-color: var(--pale-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* مرکز قرار دادن کارت افقی */
+    align-items: center; /* مرکز قرار دادن کارت عمودی */
+    direction: rtl; /* تنظیم جهت نوشتار از راست به چپ */
+    text-align: right;
+}
+
+/* استایل کانتینر کارت */
+.card-container {
+    width: 90%;
+    max-width: 400px; /* حداکثر عرض کارت */
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden; /* برای گرد شدن گوشه‌های بالای تصویر */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* سایه ظریف کارت */
+}
+
+/* استایل تصویر هدر */
+.header-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* استایل محتوای کارت */
+.card-content {
+    padding: 30px;
+    text-align: center; /* تمام محتوای داخلی را در مرکز قرار می‌دهد */
+}
+
+.card-title {
+    color: var(--dark-blue);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    color: var(--desaturated-blue);
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* استایل باکس طرح */
+.plan-box {
+    display: flex;
+    justify-content: space-between; /* جدا کردن اطلاعات طرح و دکمه تغییر */
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.plan-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.music-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.plan-name {
+    font-size: 16px;
+    color: var(--dark-blue);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.plan-price {
+    font-size: 15px;
+    color: var(--desaturated-blue);
+}
+
+.change-link {
+    color: var(--bright-blue);
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.change-link:hover {
+    color: #a0a0ff; /* رنگ روشن‌تر هنگام بردن ماوس روی لینک */
+    text-decoration: none;
+}
+
+/* استایل دکمه‌ها */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* دکمه اصلی (پرداخت) */
+.btn-primary {
+    background-color: var(--bright-blue);
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 15px rgba(56, 41, 224, 0.3); /* سایه برای برجسته شدن دکمه */
+}
+
+.btn-primary:hover {
+    background-color: #766cf1; /* رنگ تیره‌تر هنگام هاور */
+}
+
+/* دکمه ثانویه (لغو) */
+.btn-secondary {
+    background: none;
+    color: var(--desaturated-blue);
+    font-size: 15px;
+}
+
+.btn-secondary:hover {
+    color: var(--dark-blue); /* تغییر رنگ متن هنگام هاور */
+}
